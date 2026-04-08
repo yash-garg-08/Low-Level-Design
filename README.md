@@ -13,6 +13,7 @@ Each problem includes:
 | # | Problem | Design Patterns | Key Concepts |
 |---|---------|----------------|--------------|
 | 01 | [Parking Lot](01-Parking-Lot/) | Strategy, Facade | Enums, Polymorphism, HashMap |
+| 02 | [Movie Ticket Booking](02-Movie-Ticket-Booking/) | Strategy, Facade, Composition | Nested Maps, Grid Layout, Order Management |
 
 ---
 
@@ -24,8 +25,8 @@ Low-Level-Design/
 ├── 01-Parking-Lot/
 │   ├── ParkingLot.cpp       # Complete C++ implementation
 │   └── PROBLEM.md           # Problem explanation with diagrams
-├── 02-<Next-Problem>/
-│   ├── <Solution>.cpp
+├── 02-Movie-Ticket-Booking/
+│   ├── MovieTicketBooking.cpp
 │   └── PROBLEM.md
 └── ...
 ```
@@ -57,7 +58,7 @@ Here are classic LLD problems that can be added next:
 - [ ] **Chess** -- Piece hierarchy, move validation, command pattern
 - [ ] **Splitwise (Expense Sharing)** -- Graph-based debt simplification
 - [ ] **Online Shopping Cart** -- Cart management, discount strategies
-- [ ] **Movie Ticket Booking (BookMyShow)** -- Seat selection, concurrency
+- [x] **Movie Ticket Booking (BookMyShow)** -- Seat selection, concurrency
 - [ ] **ATM Machine** -- State pattern, transaction chain
 - [ ] **Car Rental System** -- Booking, pricing strategies
 - [ ] **Food Delivery System (Zomato/Swiggy)** -- Order management, observer
@@ -72,8 +73,9 @@ As problems are added, this repo will cover:
 
 | Pattern | Type | Used In |
 |---------|------|---------|
-| Strategy | Behavioral | Parking Lot (fare calculation) |
-| Facade | Structural | Parking Lot (ParkingLot class) |
+| Strategy | Behavioral | Parking Lot (fare calculation), Movie Booking (seat pricing) |
+| Facade | Structural | Parking Lot (ParkingLot class), Movie Booking (MovieBookingSystem) |
+| Composition | Structural | Movie Booking (Cinema -> Room -> Layout -> Seat) |
 | Observer | Behavioral | *upcoming* |
 | State | Behavioral | *upcoming* |
 | Singleton | Creational | *upcoming* |
