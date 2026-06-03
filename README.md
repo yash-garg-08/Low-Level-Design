@@ -15,6 +15,7 @@ Each problem includes:
 | 01 | [Parking Lot](01-Parking-Lot/) | Strategy, Facade | Enums, Polymorphism, HashMap |
 | 02 | [Movie Ticket Booking](02-Movie-Ticket-Booking/) | Strategy, Facade, Composition | Nested Maps, Grid Layout, Order Management |
 | 03 | [Vending Machine](03-Vending-Machine/) | State, Facade, SRP | State Machine, Inventory, Payment Processing | Python |
+| 04 | [Strategy Pattern](04-Strategy-Pattern/) | Strategy | Composition over Inheritance, Runtime Behavior Swapping |
 
 ---
 
@@ -31,6 +32,9 @@ Low-Level-Design/
 │   └── PROBLEM.md
 ├── 03-Vending-Machine/
 │   ├── vending_machine.py     # Python implementation
+│   └── PROBLEM.md
+├── 04-Strategy-Pattern/
+│   ├── StrategyDesignPattern.cpp
 │   └── PROBLEM.md
 └── ...
 ```
@@ -84,7 +88,7 @@ As problems are added, this repo will cover:
 
 | Pattern | Type | Used In |
 |---------|------|---------|
-| Strategy | Behavioral | Parking Lot (fare calculation), Movie Booking (seat pricing) |
+| Strategy | Behavioral | Parking Lot (fare calculation), Movie Booking (seat pricing), Strategy Pattern (robot behaviors) |
 | Facade | Structural | Parking Lot (ParkingLot class), Movie Booking (MovieBookingSystem), Vending Machine |
 | Composition | Structural | Movie Booking (Cinema -> Room -> Layout -> Seat) |
 | State | Behavioral | Vending Machine (NoMoney / MoneyInserted / Dispense states) |
