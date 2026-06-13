@@ -14,8 +14,9 @@ Each problem includes:
 |---|---------|----------------|--------------|
 | 01 | [Parking Lot](01-Parking-Lot/) | Strategy, Facade | Enums, Polymorphism, HashMap |
 | 02 | [Movie Ticket Booking](02-Movie-Ticket-Booking/) | Strategy, Facade, Composition | Nested Maps, Grid Layout, Order Management |
-| 03 | [Vending Machine](03-Vending-Machine/) | State, Facade, SRP | State Machine, Inventory, Payment Processing | Python |
+| 03 | [Vending Machine](03-Vending-Machine/) | State, Facade, SRP | State Machine, Inventory, Payment Processing |
 | 04 | [Strategy Pattern](04-Strategy-Pattern/) | Strategy | Composition over Inheritance, Runtime Behavior Swapping |
+| 04 | [Factory Pattern](04-Factory-Pattern/) | Simple Factory, Factory Method, Abstract Factory | Object Creation, Product Families, Open/Closed Principle |
 
 ---
 
@@ -35,6 +36,11 @@ Low-Level-Design/
 │   └── PROBLEM.md
 ├── 04-Strategy-Pattern/
 │   ├── StrategyDesignPattern.cpp
+│   └── PROBLEM.md
+├── 04-Factory-Pattern/
+│   ├── SimpleFactory.cpp          # Simple Factory variant
+│   ├── FactoryMethod.cpp          # Factory Method variant
+│   ├── AbstractFactoryMethod.cpp  # Abstract Factory variant
 │   └── PROBLEM.md
 └── ...
 ```
@@ -56,6 +62,17 @@ g++ -std=c++17 -o solution ParkingLot.cpp
 ```bash
 cd 03-Vending-Machine
 python3 vending_machine.py
+```
+
+### Multi-variant problems
+
+Some folders demonstrate one pattern through several standalone files. Compile and run each independently:
+
+```bash
+cd 04-Factory-Pattern
+g++ -std=c++17 SimpleFactory.cpp -o simple && ./simple
+g++ -std=c++17 FactoryMethod.cpp -o factory_method && ./factory_method
+g++ -std=c++17 AbstractFactoryMethod.cpp -o abstract_factory && ./abstract_factory
 ```
 
 ---
@@ -92,9 +109,11 @@ As problems are added, this repo will cover:
 | Facade | Structural | Parking Lot (ParkingLot class), Movie Booking (MovieBookingSystem), Vending Machine |
 | Composition | Structural | Movie Booking (Cinema -> Room -> Layout -> Seat) |
 | State | Behavioral | Vending Machine (NoMoney / MoneyInserted / Dispense states) |
+| Simple Factory | Creational | Factory Pattern (BurgerFactory by type) |
+| Factory Method | Creational | Factory Pattern (SinghBurger / KingBurger subclasses) |
+| Abstract Factory | Creational | Factory Pattern (MealFactory — Burger + GarlicBread families) |
 | Observer | Behavioral | *upcoming* |
 | Singleton | Creational | *upcoming* |
-| Factory | Creational | *upcoming* |
 | Command | Behavioral | *upcoming* |
 | Chain of Responsibility | Behavioral | *upcoming* |
 
