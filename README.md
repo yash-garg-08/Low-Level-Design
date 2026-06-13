@@ -18,6 +18,7 @@ Each problem includes:
 | 04 | [Strategy Pattern](04-Strategy-Pattern/) | Strategy | Composition over Inheritance, Runtime Behavior Swapping |
 | 05 | [Factory Pattern](05-Factory-Pattern/) | Simple Factory, Factory Method, Abstract Factory | Object Creation, Product Families, Open/Closed Principle |
 | 06 | [Singleton Pattern](06-Singleton-Pattern/) | Singleton | Single Instance, Global Access Point, Lazy vs Eager Init |
+| 07 | [Observer Pattern](07-Observer-Pattern/) | Observer | Pub/Sub, Event Notification, Loose Coupling |
 
 ---
 
@@ -45,6 +46,9 @@ Low-Level-Design/
 │   └── PROBLEM.md
 ├── 06-Singleton-Pattern/
 │   ├── Singleton.cpp
+│   └── PROBLEM.md
+├── 07-Observer-Pattern/
+│   ├── ObservableDesignPattern.cpp
 │   └── PROBLEM.md
 └── ...
 ```
@@ -118,7 +122,7 @@ As problems are added, this repo will cover:
 | Factory Method | Creational | Factory Pattern (SinghBurger / KingBurger subclasses) |
 | Abstract Factory | Creational | Factory Pattern (MealFactory — Burger + GarlicBread families) |
 | Singleton | Creational | Singleton Pattern (lazy init, eager init, thread-safety tradeoffs) |
-| Observer | Behavioral | *upcoming* |
+| Observer | Behavioral | Observer Pattern (YouTube channel/subscriber, pub/sub, pull model) |
 | Command | Behavioral | *upcoming* |
 | Chain of Responsibility | Behavioral | *upcoming* |
 
