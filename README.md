@@ -16,7 +16,8 @@ Each problem includes:
 | 02 | [Movie Ticket Booking](02-Movie-Ticket-Booking/) | Strategy, Facade, Composition | Nested Maps, Grid Layout, Order Management |
 | 03 | [Vending Machine](03-Vending-Machine/) | State, Facade, SRP | State Machine, Inventory, Payment Processing |
 | 04 | [Strategy Pattern](04-Strategy-Pattern/) | Strategy | Composition over Inheritance, Runtime Behavior Swapping |
-| 04 | [Factory Pattern](04-Factory-Pattern/) | Simple Factory, Factory Method, Abstract Factory | Object Creation, Product Families, Open/Closed Principle |
+| 05 | [Factory Pattern](05-Factory-Pattern/) | Simple Factory, Factory Method, Abstract Factory | Object Creation, Product Families, Open/Closed Principle |
+| 06 | [Singleton Pattern](06-Singleton-Pattern/) | Singleton | Single Instance, Global Access Point, Lazy vs Eager Init |
 
 ---
 
@@ -37,10 +38,13 @@ Low-Level-Design/
 ├── 04-Strategy-Pattern/
 │   ├── StrategyDesignPattern.cpp
 │   └── PROBLEM.md
-├── 04-Factory-Pattern/
+├── 05-Factory-Pattern/
 │   ├── SimpleFactory.cpp          # Simple Factory variant
 │   ├── FactoryMethod.cpp          # Factory Method variant
 │   ├── AbstractFactoryMethod.cpp  # Abstract Factory variant
+│   └── PROBLEM.md
+├── 06-Singleton-Pattern/
+│   ├── Singleton.cpp
 │   └── PROBLEM.md
 └── ...
 ```
@@ -69,7 +73,7 @@ python3 vending_machine.py
 Some folders demonstrate one pattern through several standalone files. Compile and run each independently:
 
 ```bash
-cd 04-Factory-Pattern
+cd 05-Factory-Pattern
 g++ -std=c++17 SimpleFactory.cpp -o simple && ./simple
 g++ -std=c++17 FactoryMethod.cpp -o factory_method && ./factory_method
 g++ -std=c++17 AbstractFactoryMethod.cpp -o abstract_factory && ./abstract_factory
@@ -94,6 +98,7 @@ Here are classic LLD problems that can be added next:
 - [ ] **ATM Machine** -- State pattern, transaction chain
 - [ ] **Car Rental System** -- Booking, pricing strategies
 - [ ] **Food Delivery System (Zomato/Swiggy)** -- Order management, observer
+- [x] **Singleton Pattern** -- lazy vs eager init, thread safety
 - [ ] **Logging Framework** -- Singleton, chain of responsibility
 - [ ] **Rate Limiter** -- Token bucket, sliding window
 
@@ -112,8 +117,8 @@ As problems are added, this repo will cover:
 | Simple Factory | Creational | Factory Pattern (BurgerFactory by type) |
 | Factory Method | Creational | Factory Pattern (SinghBurger / KingBurger subclasses) |
 | Abstract Factory | Creational | Factory Pattern (MealFactory — Burger + GarlicBread families) |
+| Singleton | Creational | Singleton Pattern (lazy init, eager init, thread-safety tradeoffs) |
 | Observer | Behavioral | *upcoming* |
-| Singleton | Creational | *upcoming* |
 | Command | Behavioral | *upcoming* |
 | Chain of Responsibility | Behavioral | *upcoming* |
 
